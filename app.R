@@ -14,9 +14,9 @@ min_temp <- 0
 max_temp <- 100
 
 min_height <- 0
-max_height <- 0.01
+max_height <- 0.05
 
-time_frame <- 500
+time_frame <- 1000
 pop <- c(1, 3, 23)
 pop_saved <- c()
 
@@ -50,13 +50,13 @@ ui <- fluidPage(
 			   			   sliderInput("death",
 			   			   			"Death Rate",
 			   			   			min = 0,
-			   			   			max = max_height,
-			   			   			value = 0.0005),
+			   			   			max = max_height/5,
+			   			   			value = 0.002),
 			   			   sliderInput("area",
 			   			   			"Area Multiplier",
 			   			   			min = 0.01,
-			   			   			max = 0.1,
-			   			   			value = 0.05)
+			   			   			max = 0.5,
+			   			   			value = 0.2)
 			   		)
 			   	)
 			   )
